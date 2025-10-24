@@ -43,7 +43,7 @@ export class BotsService implements OnModuleInit, OnModuleDestroy {
       const chatId = msg.chat.id;
       const text = msg.text ?? '';
       try {
-        await bot.sendMessage(chatId, `Я простой бот и  я толькоо что я получил твое сообщение: "${text}"`);
+        await bot.sendMessage(chatId, `Я простой бот и я только что получил твое сообщение: "${text}"`);
       } catch (e: unknown) {
         this.logger.error(`sendMessage failed: ${e instanceof Error ? e.message : String(e)}`);
       }
